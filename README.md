@@ -14,7 +14,7 @@ Created: 2023-08-30
 
 ## Abstract
 
-This EIP proposes a standard for centralized exchanges to cryptographically prove their solvency without revealing confidential information about user balances using cryptographic techniques like zero-knowledge proofs.
+This EIP proposes a standard for centralized exchanges to cryptographically prove their solvency without revealing information about individual user balances and aggregated information related to user balances. This is done using cryptographic techniques like zero-knowledge proofs.
 
 ## Motivation
 
@@ -36,11 +36,6 @@ The lack of a standardized, cryptographic verification process for exchange solv
 ### Data Structures
 
 - **Liability Tree**: Data structure used to maintain and compute liabilities.
-- **Asset Sum Tree**: Data structure used for aggregating assets.
-
-### Off-Chain Components
-
-[Add off-chain components here]
 
 ## Rationale
 
@@ -68,4 +63,4 @@ Given that the standard utilizes advanced cryptographic techniques, it's crucial
 
 ## Copyright
 
-Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
+Copyright and related rights waived via [CC0](/LICENSE).
