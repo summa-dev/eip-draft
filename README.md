@@ -40,7 +40,7 @@ interface ICryptographicallyAuditable {
      * @param cexAddress MUST be the address owned by the CEX (submitted as a string, as it can be a non-EVM address)
      * @param chain MUST be the name of the chain name where the address belongs (e.g., ETH, BTC)
      * @param signature MUST be the signature of the `message` signed by the address public key
-     * @param message MUST be the message signed by the address public key
+     * @param message MUST be the message signed by the address public key. The message MAY be arbitrary.
      */
     struct AddressOwnershipProof {
         string cexAddress;
@@ -62,25 +62,15 @@ interface ICryptographicallyAuditable {
     }
 
     /**
-     * @dev Zero-knowledge proof and its inputs
-     * @param proof MUST be the zero-knowledge proof
-     * @param publicInputs MUST be the proof inputs
-     */
-    struct ZKProof {
-        bytes proof;
-        uint256[] publicInputs;
-    }
-
-    /**
-     * @dev MUST emit when the CEX succesfully submits an address ownership proof
+     * @dev MUST emit when the CEX successfully submits an address ownership proof
      * @param addressOwnershipProofs MUST be the list of address ownership proofs
      */
     event AddressOwnershipProofSubmitted(
         AddressOwnershipProof[] addressOwnershipProofs
     );
     /**
-     * @dev MUST emit when the CEX succesfully submits a proof of solvency
-     * @param timestamp MUST be the timestamp at which the CEX took the snapshot of its assets and liabilites
+     * @dev MUST emit when the CEX successfully submits a proof of solvency
+     * @param timestamp MUST be the timestamp at which the CEX took the snapshot of its assets and liabilities
      * @param mstRoot MUST be the Merkle sum tree root of the CEX's liabilities
      * @param assets MUST be the list of assets owned by the CEX
      */
@@ -104,11 +94,12 @@ interface ICryptographicallyAuditable {
     ) external;
 
     /**
-     * @dev Submit proof of solvency of a CEX
+     * @dev Submit proof of solvency of a CEX.
      * @param mstRoot MUST be the Merkle sum tree root of the CEX's liabilities
      * @param assets MUST be the list of assets owned by the CEX
      * @param proof MUST be the ZK proof generated from the specified proof of solvency circuit
-     * @param timestamp MUST be the timestamp at which the CEX took the snapshot of its assets and liabilites
+     * @param timestamp MUST be the timestamp at which the CEX took the snapshot of its assets and liabilities
+     * The proof MUST be accepted if it satisfies the corresponding verifier generated from the described circuit. The inputs of the solvency proof (`mstRoot` and `assets`) are optimistically considered valid. The validity of the CEX asset balances is subject to off-chain verification, and the validity of the liabilities can be challenged by users at the user inclusion verification stage.
      * In case of successful proof submission `mstRoot` MUST be stored in the contract state against the given `timestamp` because it MAY be used by `verifyProofOfInclusion` function to verify the proof of user inclusion into the Merkle sum tree of the CEX's liabilities. `verifyProofOfInclusion` MUST be able to look up the stored `mstRoot` by a timestamp.
      * MUST revert if `mstRoot` is zero.
      * MUST revert if `timestamp` is zero.
@@ -129,7 +120,7 @@ interface ICryptographicallyAuditable {
     /**
      * @dev Verify a ZK proof of user inclusion in the Merkle sum tree of the CEX's liabilities
      * @param proof MUST be a ZK proof of inclusion generated from the specified proof of inclusion circuit
-     * @param timestamp MUST be the timestamp at which the CEX took the snapshot of its assets and liabilites
+     * @param timestamp MUST be a timestamp at which the CEX took the snapshot of its assets and liabilities
      * MUST return `true` if the proof is valid, `false` otherwise
      * MUST revert if `timestamp` is zero.
      * MUST revert if the ZK proof verification fails.
