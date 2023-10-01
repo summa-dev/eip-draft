@@ -1,15 +1,16 @@
-# EIP-XXXX: Proof of Solvency for Centralized Exchanges
+# EIP-XXXX: Cryptographic Proof of Exchange Solvency
 
----
-title: Proof of Solvency for Centralized Exchanges
-description: A standard for centralized exchanges to cryptographically prove their solvency without revealing information about individual user balances and aggregated information related to user balances.
-author: [ADD NAMES HERE]
-discussions-to: https://ethereum-magicians.org/t/eip-draft-proof-of-solvency-standard-for-centralized-exchanges/15963
-status: draft
-type: Standards Track
-category: ERC
-created: 2023-08-30
----
+## Preamble
+
+```
+EIP: XXXX
+Title: Cryptographic Proof of Exchange Solvency
+Author: [ADD NAMES HERE]
+Type: Standards Track (ERC)
+Category: ERC
+Status: Draft
+Created: 2023-08-30
+```
 
 ## Abstract
 
