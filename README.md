@@ -1,5 +1,3 @@
-# EIP-XXXX: Proof of Solvency for Centralized Exchanges
-
 ---
 title: Proof of Solvency for Centralized Exchanges
 description: A standard for centralized exchanges to cryptographically prove their solvency without revealing information about individual user balances and aggregated information related to user balances.
