@@ -144,16 +144,6 @@ interface ICryptographicallyAuditable {
 
 This standard is designed to achieve a balance between privacy and verifiability. It allows users and independent actors to confirm an exchange's solvency without exposing individual account balances, adding an extra layer of security and trust to the digital assets ecosystem.
 
-## Backwards Compatibility
-
-The implementation of this standard is expected to be fully backward compatible.
-
-[Look at some other EIPs and see what's appropriate for this section]
-
-## Test Cases
-
-[Describe test cases]
-
 ## Reference Implementation
 
 The Summa team (supported by the Privacy and Scaling Explorations team) has created a reference implementation that can be found in the discussion link specified in the preamble of this document.
@@ -161,8 +151,6 @@ The Summa team (supported by the Privacy and Scaling Explorations team) has crea
 ## Security Considerations
 
 Given that the standard utilizes advanced cryptographic techniques, it's crucial to ensure that the circuits used are secure and that the smart contracts have undergone rigorous auditing.
-
-[Describe security considerations]
 
 ## Copyright
 
