@@ -3,7 +3,7 @@ title: Proof of Solvency for Centralized Exchanges
 description: A standard for centralized exchanges to cryptographically prove solvency without revealing user balances and aggregate information.
 author: Enrico Bottazzi (@enricobottazzi), Alex Kuzmin (@alxkzmn), Jin Hwan (@sifnoc)
 discussions-to: https://ethereum-magicians.org/t/eip-draft-proof-of-solvency-standard-for-centralized-exchanges/15963
-status: draft
+status: Draft
 type: Standards Track
 category: ERC
 created: 2023-08-30
