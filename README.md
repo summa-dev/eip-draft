@@ -156,7 +156,7 @@ The implementation of this standard is expected to be fully backward compatible.
 
 ## Reference Implementation
 
-The [Summa](https://github.com/summa-dev) team (supported by the Privacy and Scaling Explorations team) has created a reference implementation [here](https://github.com/summa-dev/summa-solvency).
+The Summa team (supported by the Privacy and Scaling Explorations team) has created a reference implementation that can be found in the discussion link specified in the preamble of this document.
 
 ## Security Considerations
 
