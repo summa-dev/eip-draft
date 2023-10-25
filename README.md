@@ -1,9 +1,9 @@
 ---
 title: Proof of Solvency for Centralized Exchanges
-description: A standard for centralized exchanges to cryptographically prove their solvency without revealing information about individual user balances and aggregated information related to user balances.
+description: Proof of solvency for centralized exchanges without revealing user balances and aggregate information.
 author: Enrico Bottazzi (@enricobottazzi), Alex Kuzmin (@alxkzmn), Jin Hwan (@sifnoc)
 discussions-to: https://ethereum-magicians.org/t/eip-draft-proof-of-solvency-standard-for-centralized-exchanges/15963
-status: draft
+status: Draft
 type: Standards Track
 category: ERC
 created: 2023-08-30
@@ -156,7 +156,7 @@ The implementation of this standard is expected to be fully backward compatible.
 
 ## Reference Implementation
 
-The [Summa](https://github.com/summa-dev) team (supported by the Privacy and Scaling Explorations team) has created a reference implementation [here](https://github.com/summa-dev/summa-solvency).
+The Summa team (supported by the Privacy and Scaling Explorations team) has created a reference implementation that can be found in the discussion link specified in the preamble of this document.
 
 ## Security Considerations
 
